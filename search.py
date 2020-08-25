@@ -9,7 +9,7 @@ app = Flask(__name__)
 def index():
 	return render_template('index.html')
 
-@app.route('/search', methods = ['POST'])
+@app.route('/search/', methods = ['POST'])
 def search():
     if request.method == 'POST':
         data =  request.form["search_param"]
