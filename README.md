@@ -1,6 +1,6 @@
 # Building-a-knwoledge-base
 
-This demo of knowledge base and search api is built using Daraz help questions data. The search results are based on document similarity cosine similarity.
+This demo of knowledge base and search api is built using Daraz help questions data. The search results are based on document similarity using cosine similarity between the search parameter and the questions present in the knowledgebase.
 To learn more about cosine similarity, please [click here](https://en.wikipedia.org/wiki/Cosine_similarity#:~:text=Cosine%20similarity%20is%20a%20measure,to%20both%20have%20length%201.)
 
 
