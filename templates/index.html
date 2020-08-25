@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Knowledgebase search</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.0/css/all.css">
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&amp;display=swap">
+	<link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/compiled-addons-4.19.1.min.css">
+	<link rel="stylesheet" type="text/css" href="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/css/mdb-plugins-gathered.min.css">
+</head>
+	<body>
+      <!-- Default form subscription -->
+      <div class="container">
+		<form method ="post" class="text-center border border-light p-5" action="{{ url_for('search') }}">
+
+		    <p class="h4 mb-4">Knowledgebase Search system</p>
+
+		    
+		   
+		    <!-- Name -->
+		  <textarea name="search_param" id="search_param" rows="10" class="form-control mb-4" placeholder="Enter search param here"></textarea>
+
+		   
+		    <!-- Sign in button -->
+		    <button class="btn btn-info btn-block" type="submit">Search</button>
+
+
+		</form>
+		</div>
+		<!-- Default form subscription -->
+		<script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/js/popper.min.js"></script>
+		<script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/js/bootstrap.min.js"></script>
+		<script type="text/javascript" src="https://mdbootstrap.com/api/snippets/static/download/MDB-Pro_4.19.1/js/mdb.min.js"></script>
+		<script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/bundles/4.19.1/compiled-addons.min.js"></script>
+		<script type="text/javascript" src="https://mdbootstrap.com/wp-content/themes/mdbootstrap4/js/plugins/mdb-plugins-gathered.min.js"></script>
+	</body>
+</html>
