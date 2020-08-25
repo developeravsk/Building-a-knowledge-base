@@ -13,9 +13,10 @@ def index():
 def search():
     if request.method == 'POST':
         data =  request.form["search_param"]
+        result=searchData(data)
         return Response(result,mimetype='application/json')
 
-@app.route('/explore')
+@app.route('/explore/')
 def explore():
     result=retrieveDF()
     print(result.shape)
