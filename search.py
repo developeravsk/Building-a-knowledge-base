@@ -1,7 +1,7 @@
 import warnings
 warnings.filterwarnings("ignore")
 from flask import Flask, render_template,request,jsonify,Response
-from retrieval import searchData
+from retrieval import searchData,retrieveDF
 
 app = Flask(__name__)
 
@@ -13,8 +13,13 @@ def index():
 def search():
     if request.method == 'POST':
         data =  request.form["search_param"]
-        result=searchData(data)
         return Response(result,mimetype='application/json')
+
+@app.route('/explore')
+def explore():
+    result=retrieveDF()
+    print(result.shape)
+    return result.to_html()
 
 if __name__ == '__main__':
 	app.run()

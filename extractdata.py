@@ -62,6 +62,7 @@ def getAnswer(df_questions):
 
 def addTags(df_answers):
 	print('Building knowledgebase')
+	nontok=df_answers['title'].tolist()
 	stopwords_list = stopwords.words('english')
 	lemmatizer = WordNetLemmatizer()
 	all_tags=[]
@@ -101,5 +102,6 @@ def execute():
 	a,x=getCategory()
 	b=getQuestions(a,x)
 	c=getAnswer(b)
-	saveDB(c)
+	d=addTags(c)
+	saveDB(d)
 	print('Knowledge base built')
