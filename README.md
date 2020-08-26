@@ -14,26 +14,13 @@ Follow these steps:
   ```
   pip install -r requirements.txt
   ```
-  or
-  ```
-  pip3 install -r requirements.txt
-  ```
 4) Run 
   ```
   python basebuild.py
   ```
-  or
-  
-  ```
-  python3 basebuild.py
-  ```
-5) Once the knowledgebase is built run the following command to fireup the API
+ 5) Once the knowledgebase is built run the following command to fireup the API
   ```
   python search.py
-  ```
-  or
-  ```
-  python3 search.py
   ```
   
 The knowledgebase is represented as a form of table and can be exlored from the home page. Here is a snapshot of how it looks like
