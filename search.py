@@ -19,7 +19,8 @@ def search():
 @app.route('/search/<data>')
 def result(data):
 	result=searchData(data)
-	return render_template('result.html',result=result)
+	# return render_template('result.html',result=result,mimetype='application/json')
+	return Response(result,mimetype='application/json')
 
 @app.route('/explore/')
 def explore():
