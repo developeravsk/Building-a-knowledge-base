@@ -14,7 +14,7 @@ Follow these steps:
   ```
   pip install -r requirements.txt
   ```
-4) Run 
+4) (Optional) Run the following to build a knowledgebase database
   ```
   python basebuild.py
   ```
