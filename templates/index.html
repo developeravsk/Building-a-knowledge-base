@@ -12,7 +12,7 @@
 	<body>
       <!-- Default form subscription -->
       <div class="container">
-		<form method ="post" class="text-center border border-light p-5" action="{{ url_for('search') }}">
+		<form method ="post" class="text-center border border-light p-5" action="{{ url_for('search',search_param=search_param) }}">
 
 		    <p class="h4 mb-4">Knowledgebase Search system</p>
 

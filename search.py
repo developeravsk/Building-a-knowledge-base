@@ -1,6 +1,7 @@
 import warnings
+import json
 warnings.filterwarnings("ignore")
-from flask import Flask, render_template,request,jsonify,Response
+from flask import Flask, render_template,request,jsonify,Response, redirect, url_for
 from retrieval import searchData,retrieveDF
 
 app = Flask(__name__)
@@ -11,10 +12,14 @@ def index():
 
 @app.route('/search/', methods = ['POST'])
 def search():
-    if request.method == 'POST':
-        data =  request.form["search_param"]
-        result=searchData(data)
-        return Response(result,mimetype='application/json')
+	data =  request.form.get('search_param')
+	# return render_template('result.html',result=result)
+	return redirect(url_for("result", data=data))
+
+@app.route('/search/<data>')
+def result(data):
+	result=searchData(data)
+	return render_template('result.html',result=result)
 
 @app.route('/explore/')
 def explore():
@@ -24,3 +29,4 @@ def explore():
 
 if __name__ == '__main__':
 	app.run()
+
